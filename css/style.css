@@ -44,7 +44,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
 }
 
 .contenedor {
@@ -225,8 +225,6 @@ h3 {
     }
 }
 
-.nosotros__contenido {}
-
 .nosotros__imagen {
     grid-row: 1 / 2;
     width: 100%;
@@ -267,6 +265,48 @@ h3 {
     margin: 0;
 }
 
-.bloque_imagen {
-    width: 100%;
+
+/*=============================================
+ ------ Pagina del producto Camisa ------------
+=============================================*/
+
+@media ( min-width: 768px) {
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.camisa__imagen {}
+
+.camisa_contenida {}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.formulario_campo {
+    border: 1rem solid var(--primarioOscuro);
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.formulario_submit {
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    transition: background-color .3s ease;
+    padding: 2rem;
+    grid-column: 1 / 3;
+}
+
+.formulario_submit:hover {
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
 }
